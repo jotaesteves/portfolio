@@ -9,12 +9,23 @@ import 'fullpage.js/vendors/scrolloverflow' // Optional. When using scrollOverfl
 // import './fullpage.scrollHorizontally.min' // Optional. When using fullpage extensions
 import VueFullPage from 'vue-fullpage.js'
 
+import VueApollo from "vue-apollo"
+import apolloClient from "./vue-apollo"
+
 Vue.use(VueFullPage);
 Vue.use(Buefy)
+
+Vue.use(VueApollo);
+
+const apolloProvider = new VueApollo({
+  defaultClient: apolloClient
+});
+
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
+  apolloProvider,
   render: h => h(App)
 }).$mount('#app')
