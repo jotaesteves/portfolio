@@ -1,50 +1,39 @@
 <template>
-  <div>
-    <nav class="pt-navbar-container" uk-navbar>
-      <div class="pt-navbar-left">
-        <ul class="pt-navbar-nav">
-          <li>
-            <a href="/">Strapi Blog </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="pt-navbar-right">
-        <ul class="pt-navbar-nav">
-          <li v-for="company in companies" v-bind:key="company.id">
-            <router-link
-              :to="{ path: '/company/' + company.id }"
-              :key="company.id"
+    <b-navbar>
+        <template slot="brand">
+            <b-navbar-item
+                class="navbar__brand"
+                tag="router-link" :to="{ path: '/' }"
             >
-              {{ company.name }}
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+                Jorge
+                Esteves
+            </b-navbar-item>
+        </template>
+        <template slot="start">
+
+        </template>
+
+        <template slot="end">
+            <b-navbar-item tag="router-link" :to="{ path: '/About' }">
+                About
+            </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{ path: '/Clients' }">
+                Work
+            </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{ path: '/Services' }">
+                Services
+            </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{ path: '/Contact' }">
+                Contact
+            </b-navbar-item>
+        </template>
+    </b-navbar>
 </template>
 
 <script>
-import '../sass/_navbar.scss';
-import gql from "graphql-tag";
+import '../scss/_navbar.scss';
 
 export default {
   name: "Nav",
-  data() {
-    return {
-      companies: []
-    };
-  },
-  apollo: {
-    companies: gql`
-        query Companies {
-            companies {
-                id,
-                name,
-            }
-        }
-    `
-  }
 };
 </script>

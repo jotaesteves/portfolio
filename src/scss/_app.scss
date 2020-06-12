@@ -1,10 +1,17 @@
+* {
+  font-family: Karla, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
 a {
   text-decoration: none;
 }
 
 h1 {
-  font-family: Staatliches;
-  font-size: 120px;
+  font-family: Karla;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 4rem;
 }
 
 #category {

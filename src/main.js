@@ -5,21 +5,14 @@ import Buefy from 'buefy'
 import router from './router'
 import store from './store'
 
+import apolloProvider from './vue-apollo'
+
 import 'fullpage.js/vendors/scrolloverflow' // Optional. When using scrollOverflow:true
 // import './fullpage.scrollHorizontally.min' // Optional. When using fullpage extensions
 import VueFullPage from 'vue-fullpage.js'
 
-import VueApollo from "vue-apollo"
-import apolloClient from "./vue-apollo"
-
 Vue.use(VueFullPage);
 Vue.use(Buefy)
-
-Vue.use(VueApollo);
-
-const apolloProvider = new VueApollo({
-  defaultClient: apolloClient
-});
 
 Vue.config.productionTip = false
 

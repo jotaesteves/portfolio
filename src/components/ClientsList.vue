@@ -1,57 +1,24 @@
 <template>
   <div>
-    <div class="pt-child-width-1-2" pt-grid>
-      <div>
-        <router-link
-          v-for="client in leftClients"
-          :to="{ path: '/client/' + client.id }"
-          class="pt-link-reset"
-          :key="client.id"
-        >
-          <div class="pt-card pt-card-muted">
-            <div class="pt-card-media-top">
-              <img :src="api_url + client.image.url" alt="" height="100" />
-            </div>
-            <div class="pt-card-body">
-              <p
-                id="category"
-                v-if="client.category"
-                class="pt-text-uppercase"
-              >
-                {{ client }}
-              </p>
-              <p id="title" class="pt-text-large">{{ client.title }}</p>
-            </div>
-          </div>
-        </router-link>
-      </div>
-      <div>
-        <div class="pt-child-width-1-2@m pt-grid-match" pt-grid>
-          <router-link
-            v-for="client in rightClients"
-            :to="{ path: '/client/' + client.id }"
-            class="pt-link-reset"
-            :key="client.id"
-          >
-            <div class="pt-card pt-card-muted">
-              <div class="pt-card-media-top">
-                <img :src="api_url + client.image.url" alt="" height="100" />
-              </div>
-              <div class="pt-card-body">
-                <p
-                  id="category"
-                  v-if="client.category"
-                  class="pt-text-uppercase"
-                >
-                  {{ client.category.name }}
-                </p>
-                <p id="title" class="pt-text-large">{{ client.title }}</p>
-              </div>
-            </div>
-          </router-link>
+    <router-link
+      v-for="client in leftClients"
+      :to="{ path: '/client/' + client.name }"
+      class="client__link"
+      :key="client.id"
+    >
+      <div class="client__item">
+        <div class="client__item--image">
+          <img :src="api_url + client.logo.url" alt height="100" />
+        </div>
+        <div class="client__item__body">
+          <p class="client__item--title">{{ client.Name }}</p>
+          <p class="client__item--date">{{ formatDate(client.start_date) }} —
+            <span v-if="client.is_currently_working">current</span>
+            <span v-else>{{ formatDate(client.end_date) }}</span>
+          </p>
         </div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -67,14 +34,28 @@ export default {
   },
   computed: {
     leftClientsCount() {
-      return Math.ceil(this.clients.length / 5);
+      return Math.ceil(this.clients.length / 1);
     },
     leftClients() {
       return this.clients.slice(0, this.leftClientsCount);
-    },
-    rightArticles() {
-      return this.clients.slice(this.leftClientsCount, this.clients.length);
     }
-  }
+  },
+  methods: {
+    formatDate(date) {
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      let _date = new Date(date);
+      return `${months[_date.getMonth()]} ${_date.getFullYear()}`
+    }
+  },
 };
 </script>
+
+<style lang="scss">
+  .client {
+    &__item{
+      &--image{
+        max-width: 50px;
+      }
+    }
+  }
+</style>
