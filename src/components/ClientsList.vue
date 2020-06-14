@@ -2,7 +2,7 @@
   <div>
     <router-link
       v-for="client in leftClients"
-      :to="{ path: '/client/' + client.name }"
+      :to="{ path: '/client/' + client.title }"
       class="client__link"
       :key="client.id"
     >
@@ -11,7 +11,7 @@
           <img :src="api_url + client.logo.url" alt height="100" />
         </div>
         <div class="client__item__body">
-          <p class="client__item--title">{{ client.Name }}</p>
+          <p class="client__item--title">{{ client.title }}</p>
           <p class="client__item--date">{{ formatDate(client.start_date) }} —
             <span v-if="client.is_currently_working">current</span>
             <span v-else>{{ formatDate(client.end_date) }}</span>
@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     leftClientsCount() {
-      return Math.ceil(this.clients.length / 1);
+      return Math.ceil(this.clients.length);
     },
     leftClients() {
       return this.clients.slice(0, this.leftClientsCount);

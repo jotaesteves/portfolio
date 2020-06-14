@@ -8,10 +8,14 @@ a {
 }
 
 h1 {
-  font-family: Karla;
+  font-family: Karla, sans-serif;
   font-weight: bold;
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: 10.1vw;
+  line-height: 9.1vw;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  mix-blend-mode: difference;
+  color: white;
 }
 
 #category {
@@ -19,11 +23,12 @@ h1 {
   font-weight: 500;
 }
 
-#title {
-  letter-spacing: 0.4px;
-  font-size: 22px;
-  font-size: 1.375rem;
-  line-height: 1.13636;
+.hero.is-primary {
+  background-color: #000;
+}
+
+.hero.is-primary .title {
+  color: #fff;
 }
 
 #banner {
@@ -45,4 +50,10 @@ h1 {
 img:hover {
   opacity: 1;
   transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.outline {
+  -webkit-text-stroke: .02em #fff;
+  text-stroke: 1px #fff;
+  color: transparent;
 }

@@ -11,10 +11,12 @@ import 'fullpage.js/vendors/scrolloverflow' // Optional. When using scrollOverfl
 // import './fullpage.scrollHorizontally.min' // Optional. When using fullpage extensions
 import VueFullPage from 'vue-fullpage.js'
 
-Vue.use(VueFullPage);
+Vue.use(VueFullPage)
 Vue.use(Buefy)
 
 Vue.config.productionTip = false
+
+
 
 new Vue({
   router,

@@ -1,47 +1,33 @@
 <template>
-<div>
-      <div class="hero is-primary">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">Jorge Esteves</h1>
-                    <h2 class="subtitle">Portfolio made with vue.js</h2>
-                </div>
-            </div>
-      </div>
-      <section>
-        <Card/>
-      </section>
-      <section>
-        <ModalWindow>
-      </section>
-</div>
+  <div class="app__container">
+    <HeroBanner />
+    <Clients />
+    <Clients />
+    <Clients />
+    <Clients />
+
+  </div>
 </template>
 
 <script>
-const Card = () => import("./Card.vue")
-const LoadingComponent = () => import("./Loader")
-
-const ModalWindow = () => ({
-  component: import('./Modal/ModalWindow.vue'),
-  loading: LoadingComponent,
-  // The error component will be displayed if a timeout is
-  // provided and exceeded. Default: Infinity.
-  timeout: 3000
-})
-
+const HeroBanner = () => import("./HeroBanner.vue");
+const Clients = () => import("./Clients.vue");
 
 export default {
-  name: 'Container',
-  components: [ModalWindow, Card],
+  name: "Container",
+  components: {
+    Clients,
+    HeroBanner
+  },
   props: {
     msg: String
   },
   data() {
     return {
-      LoadingComponent: false
-    }
+      LoadingComponent: false,
+    };
   },
-}
+};
 </script>
 
 <style scoped>
@@ -59,5 +45,4 @@ li {
 a {
   color: #42b983;
 }
-
 </style>
