@@ -30,8 +30,9 @@ $link-focus-border: $primary;
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
 
-// Set Font-face
+@import "./theme-switcher";
 
+// Set Font-face
 @font-face {
     font-family: 'Karla';
     src: url('../assets/font/Karla/Karla-Regular.ttf');

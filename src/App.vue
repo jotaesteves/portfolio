@@ -1,30 +1,44 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{
+    'dark-mode': this.$store.getters['isDarkTheme'],
+    'light-mode': this.$store.getters['isLightTheme']
+    }"
+    :data-theme="themeMode"
+    >
     <Navbar />
     <router-view :key="$route.fullPath"></router-view>
-    <WorkStatus />
+    <Footer />
   </div>
 </template>
 
 <script>
-import "./scss/index.scss";
-import "./scss/_app.scss";
+import luxy from '../src/luxy.js'
+import isDarkMode from '../src/color-detector.js'
 
-import Navbar from "@/components/Navbar";
-import WorkStatus from "@/components/WorkStatus";
+import "./scss/index.scss"
+import "./scss/_app.scss"
 
-import luxy from "luxy.js";
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 export default {
   name: "App",
   components: {
     Navbar,
-    WorkStatus
+    Footer
+  },
+  computed: {
+    themeMode () {
+      return this.$store.getters['themeSwitch'] ? 'dark' : 'light'
+    }
+  },
+  data() {
+    return {
+      isDarkMode
+    }
   },
   mounted() {
-    luxy.init({
-      wrapper: "#app"
-    });
-  }
+    luxy
+  },
 };
 </script>

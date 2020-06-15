@@ -1,24 +1,27 @@
 <template>
-  <div class="workstatus">
-    <span
-      class="workstatus__dot"
-      :class="{
-        'active': isCurrentlyWorking
-      }"
-    />
-    <span class="workstatus__text">
-      {{ profile.message }}
-    </span>
+  <div class="theme-switch">
+    <b-switch 
+      v-model="isDarkMode"
+      passive-type='is-warning'
+      type='is-dark'
+    >
+      {{ isDarkMode ? "Dark Mode" : "Light Mode" }}
+    </b-switch>
   </div>
 </template>
 
 <script>
 export default {
-  name: "WorkStatus",
+  name: "ThemeSwitch",
   computed: {
-    isCurrentlyWorking() {
-      return this.profile.is_currently_working;
-    }
+    isDarkMode: {
+		get: function() {
+      return this.$store.getters['themeSwitch']
+		},
+		set: function(newValue) {
+      this.$store.dispatch('setThemeSwitch', newValue)
+		}
+	}
   },
   data() {
     return {

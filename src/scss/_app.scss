@@ -1,10 +1,38 @@
+:root {
+  --primary-color: #302AE6;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
+
 * {
   font-family: Karla, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+#app { 
+  background: var(--bg-color);
+  color: var(--font-color); 
+}
+
 a {
   text-decoration: none;
+    color: var(--primary-color);
 }
 
 h1 {
@@ -15,7 +43,8 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.01em;
   mix-blend-mode: difference;
-  color: white;
+
+  color: var(--secondary-color);
 }
 
 #category {
@@ -27,7 +56,7 @@ h1 {
   background-color: #000;
 }
 
-.hero.is-primary .title {
+.hero.is-primary {
   color: #fff;
 }
 
@@ -56,4 +85,18 @@ img:hover {
   -webkit-text-stroke: .02em #fff;
   text-stroke: 1px #fff;
   color: transparent;
+
+  &:hover {
+    color: rgb(0, 200, 83);
+    -webkit-text-stroke: 1px rgb(0, 200, 83);
+    text-decoration: none;
+  }
+}
+
+
+.clients {
+  &__container{
+    & h1 {
+    }
+  }
 }

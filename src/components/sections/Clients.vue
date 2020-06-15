@@ -1,7 +1,10 @@
 <template>
   <div>
     <section class="clients__section">
-      <div class="luxy-el clients__container" data-horizontal="1" data-speed-x="35">
+      <div
+        class="luxy-el clients__container"
+        data-horizontal="1"
+        data-speed-x="10">
         <h1>Some of my clients so far</h1>
 
         <ClientsList :clients="clients" />
@@ -18,7 +21,7 @@
 </template>
 
 <script>
-import ClientsList from "../components/ClientsList.vue";
+import ClientsList from "@/components/ClientsList.vue";
 
 export default {
   name: "Clients",
@@ -35,17 +38,15 @@ export default {
             "Web and Mobile Development\nVueJs, Javascript, Webpack, Git, Jira, Html, Css, Sass, Docker, jQuery, json, Rest,\nSome interactions with clients and user-experience interventions.",
           start_date: "2018-12-01",
           end_date: null,
-          skills: {
-            skills: [
-              "VueJs",
-              "Javascript",
-              "HTML",
-              "CSS",
-              "SCSS",
-              "REST",
-              "JSON"
-            ]
-          },
+          skills: [
+            "VueJs",
+            "Javascript",
+            "HTML",
+            "CSS",
+            "SCSS",
+            "REST",
+            "JSON"
+          ],
           is_currently_working: true,
           link: "[Leroy Merlin](https://www.leroymerlin.pt/)",
           logo: {

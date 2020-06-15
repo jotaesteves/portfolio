@@ -1,5 +1,6 @@
 <template>
-  <div>
+<!-- CLIENTS -->
+  <div class="client">
     <router-link
       v-for="client in leftClients"
       :to="{ path: '/client/' + client.title }"
@@ -20,6 +21,7 @@
       </div>
     </router-link>
   </div>
+  <!-- /CLIENTS -->
 </template>
 
 <script>
