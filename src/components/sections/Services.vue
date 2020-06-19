@@ -1,5 +1,5 @@
 <template>
   <div class="about section">
-    <h1>This is a services page</h1>
+    <h2>This is a services page</h2>
   </div >
 </template>

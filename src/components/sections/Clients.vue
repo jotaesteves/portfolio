@@ -1,22 +1,48 @@
 <template>
   <div>
-    <section class="clients__section">
+    <section class="clients__section columns">
+      <div class="column is-one-third-desktop is-half-mobile">
+      </div>
       <div
-        class="luxy-el clients__container"
+        class="luxy-el clients__container column is-one-third-desktop is-half-mobile"
         data-horizontal="1"
         data-speed-x="10">
-        <h1>Some of my clients so far</h1>
+        <h2>Some of my clients so far</h2>
+      </div>
 
+      <div class="column is-one-third-desktop is-half-mobile">
         <ClientsList :clients="clients" />
       </div>
-      <div class="clients__companies">
+    </section>
+<br>
+<br>
+    <section class="companies__section columns">
+      <div class="column is-one-third-desktop is-half-mobile">
+      </div>
+      <div
+        class="luxy-el companies__container column is-one-third-desktop is-half-mobile"
+        data-horizontal="1"
+        data-speed-x="10"
+      >
+          <h2>Companies I worked at</h2>
+      </div>
+
+      <div class="column is-one-third-desktop is-half-mobile">
+        <div class="clients__companies column one-third-desktop is-half-mobile">
         <ul class="pt-navbar-nav">
-          <li v-for="client in clients" v-bind:key="client.id">
-            <router-link :to="{ path: '/client/' + client.name }" :key="client.id">{{ client.name }}</router-link>
+          <li v-for="company in companies" v-bind:key="company.id">
+            <router-link
+              :to="{ path: '/client/' + company.name }"
+              :key="company.id"
+            >
+              {{ company.name }}
+            </router-link>
           </li>
         </ul>
       </div>
+      </div>
     </section>
+
   </div>
 </template>
 
@@ -50,7 +76,7 @@ export default {
           is_currently_working: true,
           link: "[Leroy Merlin](https://www.leroymerlin.pt/)",
           logo: {
-            url: "../assets/img/logo_b01dd9ec5a.jpeg",
+            url: "leroymerlin.jpg",
             __typename: "UploadFile"
           },
           __typename: "Clients"
@@ -65,7 +91,7 @@ export default {
           is_currently_working: null,
           link: "[PC Diga](https://www.pcdiga.com/)",
           logo: {
-            url: "../assets/img/pcdiga_5b08cb0097.svg",
+            url: "pcdiga.svg",
             __typename: "UploadFile"
           },
           __typename: "Clients"
@@ -82,7 +108,7 @@ export default {
           link:
             "[Blue-Infinity linked by Isobar](https://www.isobar.com/pt/en/)",
           logo: {
-            url: "../assets/img/blue_infnity_logo_ed9ced3018.png",
+            url: "blue_infnity_logo.png",
             __typename: "UploadFile"
           },
           __typename: "Clients"

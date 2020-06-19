@@ -53,11 +53,15 @@ h1 {
 }
 
 .hero.is-primary {
-  background-color: #000;
+  background-color: var(--background-color);
 }
 
-.hero.is-primary {
-  color: #fff;
+.hero-body {
+  background-image: url('../assets/img/fabian-grohs-U0tBTn8UR8I-unsplash.jpg');
+  background-size: cover;
+  background-position-x: 45vw;
+  background-position-y: -70vh;
+  background-repeat: no-repeat;
 }
 
 #banner {

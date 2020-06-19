@@ -1,6 +1,6 @@
 <template>
 <!-- CLIENTS -->
-  <div class="client">
+  <div>
     <router-link
       v-for="client in leftClients"
       :to="{ path: '/client/' + client.title }"
@@ -9,7 +9,7 @@
     >
       <div class="client__item">
         <div class="client__item--image">
-          <img :src="api_url + client.logo.url" alt height="100" />
+          <img :src="getImgUrl(client.logo.url)" alt height="100" />
         </div>
         <div class="client__item__body">
           <p class="client__item--title">{{ client.title }}</p>
@@ -47,6 +47,9 @@ export default {
       const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
       let _date = new Date(date);
       return `${months[_date.getMonth()]} ${_date.getFullYear()}`
+    },
+    getImgUrl(pic) {
+      return require('../assets/img/'+pic)
     }
   },
 };

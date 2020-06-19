@@ -13,7 +13,7 @@
 
 <script>
 import luxy from '../src/luxy.js'
-import isDarkMode from '../src/color-detector.js'
+import isDarkMode from '../src/dark-theme-detector.js'
 
 import "./scss/index.scss"
 import "./scss/_app.scss"

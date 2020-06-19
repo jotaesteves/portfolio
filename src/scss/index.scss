@@ -64,3 +64,21 @@ $link-focus-border: $primary;
     font-weight: bold;
     font-style: italic;
 }
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('../assets/font/FiraCode/ttf/FiraCode-Regular.ttf');
+    src: url('../assets/font/FiraCode/ttf/FiraCode-Regular.ttf') format('truetype');
+    src: url('../assets/font/FiraCode/woff/FiraCode-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('../assets/font/FiraCode/ttf/FiraCode-Bold.ttf');
+    src: url('../assets/font/FiraCode/ttf/FiraCode-Bold.ttf') format('truetype');
+    src: url('../assets/font/FiraCode/woff/FiraCode-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
