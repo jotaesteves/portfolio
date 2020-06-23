@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="clients">
     <section class="clients__section columns">
       <div class="column is-one-third-desktop is-half-mobile">
       </div>

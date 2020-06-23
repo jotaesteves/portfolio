@@ -14,16 +14,16 @@
         </template>
 
         <template slot="end">
-            <b-navbar-item tag="router-link" :to="{ path: '/About' }">
+            <b-navbar-item tag="a" v-scroll-to="'#about'">
                 About
             </b-navbar-item>
-            <b-navbar-item tag="router-link" :to="{ path: '/Clients' }">
+            <b-navbar-item tag="a" v-scroll-to="'#clients'">
                 Work
             </b-navbar-item>
-            <b-navbar-item tag="router-link" :to="{ path: '/Services' }">
+            <b-navbar-item tag="a" v-scroll-to="'#services'">
                 Services
             </b-navbar-item>
-            <b-navbar-item tag="router-link" :to="{ path: '/Contact' }">
+            <b-navbar-item tag="a" v-scroll-to="'#contact'">
                 Contact
             </b-navbar-item>
         </template>
