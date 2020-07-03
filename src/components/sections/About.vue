@@ -3,7 +3,7 @@
 
     <div class="wrapper">
       <div class="circle">
-        <img id="reload" src="@/assets/img/rotating_text.svg" alt="scroll">
+        <img id="reload" :src="srcImage" alt="scroll">
       </div>
     </div>
     <div class="about__wrapper">
@@ -31,6 +31,12 @@ methods: {
   scrollRotate() {
     let image = document.getElementById("reload");
     image.style.transform = "rotate(" + window.pageYOffset/4 + "deg)";
+  }
+},
+computed: {
+  srcImage() {
+    console.log(this.$store)
+    return this.$store.getters['isDarkTheme'] ? require('@/assets/img/rotating_text_w.svg') : require('../../assets/img/rotating_text.svg')
   }
 },
 created () {

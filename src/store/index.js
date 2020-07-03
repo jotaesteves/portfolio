@@ -11,7 +11,7 @@ export default new Vuex.Store({
     SET_THEME_SWITCH: (state, bool) => {
       localStorage.setItem('theme', bool)
       state.themeSwitch = bool
-    } 
+    }
   },
   actions: {
     setThemeSwitch: (state, bool) => {
