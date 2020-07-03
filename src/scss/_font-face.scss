@@ -1,0 +1,51 @@
+
+// Set Font-face
+@font-face {
+    font-family: 'Karla';
+    src: url('../assets/font/Karla/Karla-Regular.ttf');
+    src: url('../assets/font/Karla/Karla-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../assets/font/Karla/Karla-Bold.ttf');
+    src: url('../assets/font/Karla/Karla-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../assets/font/Karla/Karla-Italic.ttf');
+    src: url('../assets/font/Karla/Karla-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../assets/font/Karla/Karla-BoldItalic.ttf');
+    src: url('../assets/font/Karla/Karla-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('../assets/font/FiraCode/ttf/FiraCode-Regular.ttf');
+    src: url('../assets/font/FiraCode/ttf/FiraCode-Regular.ttf') format('truetype');
+    src: url('../assets/font/FiraCode/woff/FiraCode-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('../assets/font/FiraCode/ttf/FiraCode-Bold.ttf');
+    src: url('../assets/font/FiraCode/ttf/FiraCode-Bold.ttf') format('truetype');
+    src: url('../assets/font/FiraCode/woff/FiraCode-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}

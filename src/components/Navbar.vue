@@ -4,9 +4,9 @@
             <b-navbar-item
                 class="navbar__brand"
                 tag="router-link" :to="{ path: '/' }"
+                v-scroll-to="'#home'"
             >
-                Jorge
-                Esteves
+                Jorge Esteves
             </b-navbar-item>
         </template>
         <template slot="start">
@@ -19,9 +19,6 @@
             </b-navbar-item>
             <b-navbar-item tag="a" v-scroll-to="'#clients'">
                 Work
-            </b-navbar-item>
-            <b-navbar-item tag="a" v-scroll-to="'#services'">
-                Services
             </b-navbar-item>
             <b-navbar-item tag="a" v-scroll-to="'#contact'">
                 Contact

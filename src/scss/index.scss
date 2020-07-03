@@ -1,84 +1,13 @@
-// Import Bulma's core
-@import "~bulma/sass/utilities/_all";
-
-// Set your colors
-$primary: #3df;
-$primary-invert: findColorInvert($primary);
-$twitter: #4099FF;
-$twitter-invert: findColorInvert($twitter);
-
-// Setup $colors to use as bulma classes (e.g. 'is-twitter')
-$colors: (
-    "white": ($white, $black),
-    "black": ($black, $white),
-    "light": ($light, $light-invert),
-    "dark": ($dark, $dark-invert),
-    "primary": ($primary, $primary-invert),
-    "info": ($info, $info-invert),
-    "success": ($success, $success-invert),
-    "warning": ($warning, $warning-invert),
-    "danger": ($danger, $danger-invert),
-    "twitter": ($twitter, $twitter-invert)
-);
-
-// Links
-$link: $primary;
-$link-invert: $primary-invert;
-$link-focus-border: $primary;
-
-// Import Bulma and Buefy styles
-@import "~bulma";
-@import "~buefy/src/scss/buefy";
-
+@import "./variables";
+@import "./font-face";
 @import "./theme-switcher";
 
-// Set Font-face
-@font-face {
-    font-family: 'Karla';
-    src: url('../assets/font/Karla/Karla-Regular.ttf');
-    src: url('../assets/font/Karla/Karla-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@import "./app";
 
-@font-face {
-    font-family: 'Karla';
-    src: url('../assets/font/Karla/Karla-Bold.ttf');
-    src: url('../assets/font/Karla/Karla-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
+@import "./hero-banner";
+@import "./clients";
+@import "./about";
 
-@font-face {
-    font-family: 'Karla';
-    src: url('../assets/font/Karla/Karla-Italic.ttf');
-    src: url('../assets/font/Karla/Karla-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
+@import "./footer";
 
-@font-face {
-    font-family: 'Karla';
-    src: url('../assets/font/Karla/Karla-BoldItalic.ttf');
-    src: url('../assets/font/Karla/Karla-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'FiraCode';
-    src: url('../assets/font/FiraCode/ttf/FiraCode-Regular.ttf');
-    src: url('../assets/font/FiraCode/ttf/FiraCode-Regular.ttf') format('truetype');
-    src: url('../assets/font/FiraCode/woff/FiraCode-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'FiraCode';
-    src: url('../assets/font/FiraCode/ttf/FiraCode-Bold.ttf');
-    src: url('../assets/font/FiraCode/ttf/FiraCode-Bold.ttf') format('truetype');
-    src: url('../assets/font/FiraCode/woff/FiraCode-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
+@import "./buefy";

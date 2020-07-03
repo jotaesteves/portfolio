@@ -25,7 +25,7 @@ export default {
       profile: {
         id: "1",
         is_currently_working: true,
-        message: "currently busy",
+        message: "currently busy - available July",
         __typename: "Profile"
       }
     };

@@ -1,0 +1,63 @@
+@import './variables';
+
+.hero {
+
+  &.is-primary{
+    background-color: var(--background-color);
+  }
+
+  /*&-body{
+    background-image: url('../assets/img/fabian-grohs-U0tBTn8UR8I-unsplash.jpg');
+    background-size: cover;
+    background-position-x: 45vw;
+    background-position-y: -70vh;
+    background-repeat: no-repeat;
+  }*/
+  &-body {
+    .container {
+      height: 80vh;
+    }
+  }
+
+  &__title {
+    margin-left: 678px;
+    margin-top: 138px;
+    width: 550px;
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__image {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 42.3vw;
+  }
+
+  h1 {
+    font-family: FiraCode, sans-serif;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 6.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    mix-blend-mode: difference;
+    color: var(--secondary-color);
+  }
+
+
+  .outline {
+    -webkit-text-stroke: .02em var(--font-color);
+    text-stroke: 1px var(--font-color);
+    color: transparent;
+
+    &:hover {
+      color: $primary;
+      -webkit-text-stroke: 1px $primary;
+      text-decoration: none;
+    }
+  }
+}

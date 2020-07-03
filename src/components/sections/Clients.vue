@@ -29,7 +29,7 @@
 
       <div class="column is-one-third-desktop is-half-mobile">
         <div class="clients__companies column one-third-desktop is-half-mobile">
-        <ul class="pt-navbar-nav">
+        <ul class="">
           <li v-for="company in companies" v-bind:key="company.id">
             <router-link
               :to="{ path: '/client/' + company.name }"

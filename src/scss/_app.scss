@@ -1,22 +1,7 @@
-:root {
-  --primary-color: #302AE6;
-  --secondary-color: #536390;
-  --font-color: #424242;
-  --bg-color: #fff;
-  --heading-color: #292922;
-}
-
-[data-theme="dark"] {
-  --primary-color: #9A97F3;
-  --secondary-color: #818cab;
-  --font-color: #e1e1ff;
-  --bg-color: #161625;
-  --heading-color: #818cab;
-}
-
+@import './variables';
 
 * {
-  font-family: Karla, Helvetica, Arial, sans-serif;
+  font-family: FiraCode, Karla, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -25,82 +10,28 @@ body {
   color: var(--font-color);
 }
 
-#app { 
+#app {
   background: var(--bg-color);
-  color: var(--font-color); 
+  color: var(--font-color);
 }
 
 a {
   text-decoration: none;
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 h1 {
-  font-family: Karla, sans-serif;
-  font-weight: bold;
-  font-size: 7.1vw;
-  line-height: 6.1vw;
+  font-family: FiraCode, sans-serif;
+  font-weight: bold!important;
+  font-size: 6rem!important;
+  line-height: 6.2rem;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
-  mix-blend-mode: difference;
+  letter-spacing: 0;
 
   color: var(--secondary-color);
-}
-
-#category {
-  font-family: Staatliches;
-  font-weight: 500;
-}
-
-.hero.is-primary {
-  background-color: var(--background-color);
-}
-
-.hero-body {
-  background-image: url('../assets/img/fabian-grohs-U0tBTn8UR8I-unsplash.jpg');
-  background-size: cover;
-  background-position-x: 45vw;
-  background-position-y: -70vh;
-  background-repeat: no-repeat;
-}
-
-#banner {
-  margin: 20px;
-  height: 800px;
-}
-
-#editor {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
-.pt-navbar-container {
-  background: #fff !important;
-  font-family: Staatliches;
 }
 
 img:hover {
   opacity: 1;
   transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
-.outline {
-  -webkit-text-stroke: .02em #fff;
-  text-stroke: 1px #fff;
-  color: transparent;
-
-  &:hover {
-    color: rgb(0, 200, 83);
-    -webkit-text-stroke: 1px rgb(0, 200, 83);
-    text-decoration: none;
-  }
-}
-
-
-.clients {
-  &__container{
-    & h1 {
-    }
-  }
 }
